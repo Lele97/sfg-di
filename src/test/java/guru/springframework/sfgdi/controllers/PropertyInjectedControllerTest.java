@@ -11,13 +11,11 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectedController();
-
         controller.greetingService = new ConstructorGreetingService();
     }
 
     @Test
     void getGreeting() {
-
         System.out.println(controller.getGreeting());
     }
 }
