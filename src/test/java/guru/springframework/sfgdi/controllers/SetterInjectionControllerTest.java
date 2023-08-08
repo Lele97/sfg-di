@@ -4,18 +4,18 @@ import guru.springframework.sfgdi.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class PropertyInjectedControllerTest {
+class SetterInjectionControllerTest {
 
-    PropertyInjectedController controller;
+    SetterInjectionController controller;
 
     @BeforeEach
     void setUp() {
-        controller = new PropertyInjectedController();
-        controller.greetingServices = new ConstructorGreetingService();
+        controller = new SetterInjectionController();
+        controller.setGreetingServices(new ConstructorGreetingService());
     }
 
     @Test
-    void greeting(){
+    void getGreetingServices() {
         System.out.println(controller.getGreeting());
     }
 }

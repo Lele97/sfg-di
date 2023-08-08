@@ -3,15 +3,11 @@ package guru.springframework.sfgdi.services;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by jt on 12/27/19.
- */
-@Primary
+@Primary//per dare maggiore preferenza a un bean quando ci sono più bean dello stesso tipo.
 @Service
-public class PrimaryGreetingService implements GreetingService {
-
+public class PrimaryGreetingService implements GreetingServices{
     @Override
     public String sayGreeting() {
-        return "Hello World - From the PRIMARY Bean";
+        return "Hello World - From the primary bean";
     }
 }
