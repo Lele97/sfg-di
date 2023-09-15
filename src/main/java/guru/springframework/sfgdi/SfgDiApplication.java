@@ -23,6 +23,11 @@ public class SfgDiApplication {
 		String greeting = myController.sayHello();
 		System.out.println(greeting);
 
+
+		PetController petController = (PetController) ctx.getBean("petController");
+		System.out.println(petController.whichPetIsTheBest());
+
+
 		System.out.println("-------Primary Bean");
 		PrimaryBeansController primaryBeansController = (PrimaryBeansController) ctx.getBean("primaryBeansController");
 		System.out.println(primaryBeansController.getGreeting());
