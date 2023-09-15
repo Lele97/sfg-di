@@ -20,9 +20,15 @@ public class PetConfig {
        return petServiceFactory.getPetService("dog");
     }
 
-    @Profile({"cat", "default"})
+    @Profile("cat")
     @Bean("pet")
     PetService catPetService(PetServiceFactory petServiceFactory) {
         return petServiceFactory.getPetService("cat");
+    }
+
+    @Profile("panda")
+    @Bean("pet")
+    PetService pandaPetService(PetServiceFactory petServiceFactory) {
+        return petServiceFactory.getPetService("panda");
     }
 }

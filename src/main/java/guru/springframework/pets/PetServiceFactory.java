@@ -10,7 +10,7 @@ public class PetServiceFactory {
             case "cat":
                 return new CatPetService();
             default:
-                return new DogPetService();
+                return new PandaPetService();
         }
     }
 }
